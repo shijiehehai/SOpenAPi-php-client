@@ -11,7 +11,7 @@ use SOpenApi\BaseApiClient;
 class StatisticClient extends BaseApiClient
 {
     const REGION_DISTRIBUTION_URL = SOPENAPI_BASE_URL . '/openapi/yuqing/getUserRegionDistribution';
-    const SOURCE_INFO_URL = SOPENAPI_BASE_URL . '/openapi/yuqing/getUserSourceInfos';
+    const SOURCE_INFO_URL = SOPENAPI_BASE_URL . '/openapi/yuqing/getUserSourceInfo';
 
     /**
      * 来源类型舆情数量统计分布

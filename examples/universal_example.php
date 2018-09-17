@@ -21,4 +21,4 @@ echo "list sentiments keyword : {$params['keyword']} type : {$params['type']} at
 " page : {$params['page']} page count : {$params['page_count']}";
 $response = $sentimentClient->getSentimentList($params['keyword'], $params['type'], $params['attribute'],
     $params['page'], $params['page_count']);
-print_r($response);
+print_r($response['body']);
