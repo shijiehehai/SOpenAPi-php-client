@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: shijie
- * Date: 2018/9/12
- * Time: 上午10:29
- */
+
 
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/universal/SentimentClient.php';

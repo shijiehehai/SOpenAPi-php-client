@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: shijie
- * Date: 2018/9/12
- * Time: 上午10:01
- */
+
 require_once __DIR__ . '/../config.php';
 use SOpenApi\BaseApiClient;
 
@@ -45,7 +40,6 @@ class ThemeStatisticClient extends BaseApiClient
      * @param string $beginDate
      * @param string $endDate
      * @return mixed
-     * User: shijie
      * 2018/9/12 上午10:36
      */
     public function getThemeAttributeInfo($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
@@ -60,98 +54,97 @@ class ThemeStatisticClient extends BaseApiClient
         $response = $this->post($uri, $params);
         return $response;
     }
-//
-//    public function getThemerRegionDistribution($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
-//    {
-//        $uri = self::THEME_REGION_DISTRIBUTION;
-//        $params = [
-//            'theme_name' => $themeName,
-//            'date_type' => $dateType,
-//            'begin_date' => $beginDate,
-//            'end_date' => $endDate
-//        ];
-//        $response = $this->post($uri, $params);
-//        return $response;
-//    }
 
-//    public function getThemeSourceDistribution($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
-//    {
-//        $uri = self::THEME_SOURCE_DISTRIBUTION;
-//        $params = [
-//            'theme_name' => $themeName,
-//            'date_type' => $dateType,
-//            'begin_date' => $beginDate,
-//            'end_date' => $endDate
-//        ];
-//        $response = $this->post($uri, $params);
-//        return $response;
-//    }
+    public function getThemerRegionDistribution($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
+    {
+        $uri = self::THEME_REGION_DISTRIBUTION;
+        $params = [
+            'theme_name' => $themeName,
+            'date_type' => $dateType,
+            'begin_date' => $beginDate,
+            'end_date' => $endDate
+        ];
+        $response = $this->post($uri, $params);
+        return $response;
+    }
 
-//    public function getThemeTopSites($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
-//    {
-//        $uri = self::THEME_TOP_SITES;
-//        $params = [
-//            'theme_name' => $themeName,
-//            'date_type' => $dateType,
-//            'begin_date' => $beginDate,
-//            'end_date' => $endDate
-//        ];
-//        $response = $this->post($uri, $params);
-//        return $response;
-//
-//    }
-//
-//    public function getBroadcastPath($themeName, $url)
-//    {
-//        $uri = self::THEME_Broadcast_Path;
-//        $params = [
-//            'theme_name' => $themeName,
-//            'url' => $url,
-//        ];
-//        $response = $this->post($uri, $params);
-//        return $response;
-//
-//    }
-//
-//    public function getThemeHotNews($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
-//    {
-//        $uri = self::THEME_HOT_NEWS;
-//        $params = [
-//            'theme_name' => $themeName,
-//            'date_type' => $dateType,
-//            'begin_date' => $beginDate,
-//            'end_date' => $endDate
-//        ];
-//        $response = $this->post($uri, $params);
-//        return $response;
-//
-//    }
+    public function getThemeSourceDistribution($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
+    {
+        $uri = self::THEME_SOURCE_DISTRIBUTION;
+        $params = [
+            'theme_name' => $themeName,
+            'date_type' => $dateType,
+            'begin_date' => $beginDate,
+            'end_date' => $endDate
+        ];
+        $response = $this->post($uri, $params);
+        return $response;
+    }
 
-//    public function getThemeHotWords($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
-//    {
-//        $uri = self::THEME_HOT_WORDS;
-//        $params = [
-//            'theme_name' => $themeName,
-//            'date_type' => $dateType,
-//            'begin_date' => $beginDate,
-//            'end_date' => $endDate
-//        ];
-//        $response = $this->post($uri, $params);
-//        return $response;
-//    }
-//
-//    public function getThemeAttributeTrend($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
-//    {
-//        $uri = self::THEME_Attribute_Trend;
-//        $params = [
-//            'theme_name' => $themeName,
-//            'date_type' => $dateType,
-//            'begin_date' => $beginDate,
-//            'end_date' => $endDate
-//        ];
-//        $response = $this->post($uri, $params);
-//        return $response;
-//
-//    }
+    public function getThemeTopSites($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
+    {
+        $uri = self::THEME_TOP_SITES;
+        $params = [
+            'theme_name' => $themeName,
+            'date_type' => $dateType,
+            'begin_date' => $beginDate,
+            'end_date' => $endDate
+        ];
+        $response = $this->post($uri, $params);
+        return $response;
+
+    }
+
+    public function getBroadcastPath($themeName, $url)
+    {
+        $uri = self::THEME_Broadcast_Path;
+        $params = [
+            'theme_name' => $themeName,
+            'url' => $url,
+        ];
+        $response = $this->post($uri, $params);
+        return $response;
+
+    }
+
+    public function getThemeHotNews($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
+    {
+        $uri = self::THEME_HOT_NEWS;
+        $params = [
+            'theme_name' => $themeName,
+            'date_type' => $dateType,
+            'begin_date' => $beginDate,
+            'end_date' => $endDate
+        ];
+        $response = $this->post($uri, $params);
+        return $response;
+
+    }
+
+    public function getThemeHotWords($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
+    {
+        $uri = self::THEME_HOT_WORDS;
+        $params = [
+            'theme_name' => $themeName,
+            'date_type' => $dateType,
+            'begin_date' => $beginDate,
+            'end_date' => $endDate
+        ];
+        $response = $this->post($uri, $params);
+        return $response;
+    }
+
+    public function getThemeAttributeTrend($themeName, $dateType=7, $beginDate='2018-01-01', $endDate='2018-02-01')
+    {
+        $uri = self::THEME_Attribute_Trend;
+        $params = [
+            'theme_name' => $themeName,
+            'date_type' => $dateType,
+            'begin_date' => $beginDate,
+            'end_date' => $endDate
+        ];
+        $response = $this->post($uri, $params);
+        return $response;
+    }
 
 }

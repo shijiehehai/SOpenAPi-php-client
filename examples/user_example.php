@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: shijie
- * Date: 2018/9/12
- * Time: 下午2:15
- */
+
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/user/StatisticsClient.php';
 require_once __DIR__ . '/sso/SSOClient.php';
